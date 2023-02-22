@@ -77,6 +77,17 @@ const createUser = (potentialUser) => {
   return { err: null, user: potentialUser };
 };
 
+const updatePassword = (email, password) => {
+  const currentUser = userDatabase.find((user) => user.email === email);
+
+  if (!currentUser) {
+    return { err: "User doesn't exist, what are you doing ?!", user: null };
+  }
+
+  currentUser.password = password;
+  return { err: null, user: currentUser };
+};
+
 const sayBob = () => console.log("bob");
 
-module.exports = { authenticateUser, getUserByEmail, createUser, sayBob };
+module.exports = { authenticateUser, getUserByEmail, createUser, sayBob, updatePassword };

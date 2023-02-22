@@ -1,0 +1,16 @@
+<%- include('partials/_head.ejs') %>
+
+
+	<section>
+		
+			<form action="/users/<%= email %>/update" method="POST" autoComplete="off">
+				<label for="email">Email address: <%= email %></label>
+				<label for="password">Password:</label>
+				<input type="password" name="password" placeholder="Enter your password" value="<%= password %>">
+				<button type="submit">Update the password!</button>
+			</form>
+
+	</section>
+	</body>
+
+	</html>

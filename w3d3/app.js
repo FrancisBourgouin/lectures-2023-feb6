@@ -1,6 +1,12 @@
 const cookieParser = require("cookie-parser");
 const express = require("express"); // Import Express package, Framework to make a simpler server (http)
-const { authenticateUser, getUserByEmail, createUser, sayBob } = require("./users");
+const {
+  authenticateUser,
+  getUserByEmail,
+  createUser,
+  sayBob,
+  updatePassword,
+} = require("./users");
 
 const app = express(); // Instantiate an express object for us to use
 const port = 3000; // Store the port value inside the port variable
@@ -15,7 +21,6 @@ app.set("view engine", "ejs"); // Set the view engine to EJS
 // Users!
 
 app.get("/", (req, res) => {
-  console.log(req);
   const { email } = req.cookies;
 
   const { err, user } = getUserByEmail(email);
@@ -31,6 +36,38 @@ app.get("/", (req, res) => {
 
 app.get("/users/:user_email", (req, res) => {
   const userEmail = req.params.user_email;
+
+  if (userEmail !== req.cookies.email) {
+    return res.redirect("/");
+  }
+
+  const { err, user } = getUserByEmail(userEmail);
+
+  if (err) {
+    return res.redirect("/");
+  }
+
+  const templateVars = { email: user.email, password: user.password };
+
+  res.render("dashboard", templateVars);
+});
+
+app.post("/users/:user_email/update", (req, res) => {
+  const email = req.params.user_email;
+  const password = req.body.password;
+
+  if (email !== req.cookies.email) {
+    return res.redirect("/");
+  }
+
+  const { err, user } = updatePassword(email, password);
+
+  if (err) {
+    return res.redirect(`/users/${email}?success=false`);
+  }
+
+  console.log(user);
+  return res.redirect(`/users/${email}?success=true`);
 });
 
 app.post("/login", (req, res) => {
