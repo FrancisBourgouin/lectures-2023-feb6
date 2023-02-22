@@ -1,0 +1,37 @@
+<%- include('partials/_head.ejs') %>
+<section>
+	<h1>
+		<span>Super secret thief page ! <%= name %></span>
+	</h1>
+</section>
+	<section>
+		<main>
+			<div class="door">
+			</div>
+			<% if(imagePath){ %>
+				<img src="<%= imagePath%>" alt="">
+			<% } %>
+		</main>
+	</section>
+	<% if(!name){ %>
+		<section>
+				<form action="/login" method="POST" autoComplete="off">
+					<label for="email">Email address:</label>
+					<input type="email" name="email" placeholder="Enter your email">
+					<label for="password">Password:</label>
+					<input type="password" name="password" placeholder="Enter your password">
+					<button type="submit">Open the vault!</button>
+				</form>
+	
+		</section>
+	<% } else { %>
+		<section>
+			<form action="/logout" method="POST" autoComplete="off">
+				<button type="submit">Close the vault!</button>
+			</form>
+
+	</section>
+	<% } %>
+	</body>
+
+	</html>
