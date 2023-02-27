@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>CSS Selectors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <style>
+    article .danger {
+    }
+
+    article.danger {
+    }
+
+    h1 {
+      text-decoration: underline;
+    }
+
+    /* Find all the articles that have the class danger */
+    article.danger {
+      background: rgba(255, 0, 0, 0.5);
+    }
+
+    h1.danger {
+      border-bottom: 3px solid red;
+      text-decoration: none;
+    }
+
+    /* Find all the sections, then find all the children h1 of all the sections */
+    section > h1 {
+      color: white;
+      background: #bada55;
+    }
+
+    /* Find all the articles, then find all the h1 of all the articles */
+    article h1 {
+      color: #b0b;
+    }
+  </style>
+  <body>
+    <main>
+      <h1 class="danger">Posts!</h1>
+      <section>
+        <h1>ALL THE POSTS</h1>
+        <article>
+          <h1><em>Title of post</em></h1>
+          <p>
+            <strong>Lorem ipsum dolor,</strong> sit amet consectetur adipisicing elit.
+            Expedita at tempore aperiam, maiores aspernatur ea debitis quas impedit
+            nostrum perferendis molestias asperiores odio sapiente temporibus. Facere
+            optio impedit iste! Provident!
+          </p>
+        </article>
+        <article class="danger">
+          <h1>Title of post</h1>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita at tempore
+            aperiam, maiores aspernatur ea debitis quas impedit nostrum perferendis
+            molestias asperiores odio sapiente temporibus. Facere optio impedit iste!
+            Provident!
+          </p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
+
+HTML SERVING CSS => Bootstrap / Tailwind / .. CSS SERVING HTML
+
+<!-- CLASSES : Use them a lot, no biggie -->
+<!-- ID : Try to use it only for JS targeting -->

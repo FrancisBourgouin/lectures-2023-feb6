@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Box Model</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    main p {
+      font-size: 70px;
+
+      width: 150px;
+      height: 150px;
+
+      box-sizing: content-box; /* Width is size of element only */
+      box-sizing: border-box; /* Width is border + padding + element */
+
+      display: inline-block;
+      border: 5px solid brown;
+
+      padding: 20px; /* Between the element and the border */
+      margin: 20px; /* Between the border and outside */
+    }
+
+    header {
+      background: #bada55;
+      padding: 50px;
+    }
+
+    header h1 {
+      /* margin:50px; */
+    }
+  </style>
+  <body>
+    <header>
+      <h1>BOX MODEL!</h1>
+      <h2>Subtitle</h2>
+    </header>
+    <p>Spacing between elements</p>
+    <p>Margin or Padding</p>
+    <main>
+      <p>🥔</p>
+      <p>🥔</p>
+    </main>
+  </body>
+</html>

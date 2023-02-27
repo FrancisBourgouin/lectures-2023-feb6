@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Flex!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      padding: 40px;
+      background: #ccccff;
+
+      display: flex;
+      flex-direction: column; /* Main axis direction */
+
+      align-items: center; /* Alignement of the cross axis */
+      justify-content: space-between; /* Justify elements on the main axis*/
+    }
+    p {
+      font-size: 30px;
+    }
+
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    section p {
+      display: inline-block;
+      padding: 20px;
+      border: 2px solid brown;
+    }
+
+    section.coffee {
+      display: flex;
+      width: 500px;
+      height: 500px;
+      background: brown;
+
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+  <body>
+    <header>
+      <h1>Food!</h1>
+      <p>🐻</p>
+    </header>
+    <section>
+      <p>🐔</p>
+      <p>🐔</p>
+      <p>🐔</p>
+      <p>🐔</p>
+      <p>🐔</p>
+      <p>🐔</p>
+      <p>🐔</p>
+      <p>🐔</p>
+      <p>🐔</p>
+    </section>
+    <section class="coffee">
+      <p>☕</p>
+    </section>
+  </body>
+</html>

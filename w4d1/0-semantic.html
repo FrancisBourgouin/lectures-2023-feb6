@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Semantics!</title>
+  </head>
+  <style>
+    body {
+      font-family: "Helvetica";
+      font-size: 20px;
+    }
+    header {
+      color: #b0b;
+    }
+
+    article {
+      background: #c0ffee;
+    }
+
+    article.danger {
+      background: red;
+    }
+
+    em {
+      font-style: normal;
+      text-transform: uppercase;
+    }
+  </style>
+  <body>
+    <header>
+      <h1>Cascading Style Sheets !</h1>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
+        >List of all the semantic tags</a
+      >
+    </header>
+    <div>
+      <h1>H1 Title</h1>
+      <h2>H2 Title</h2>
+      <h3>H3 Title</h3>
+      <h4>H4 Title</h4>
+      <h5>H5 Title</h5>
+      <h6>H6 Title</h6>
+    </div>
+    <main>
+      <h1>Posts!</h1>
+      <section>
+        <article>
+          <h1><em>Title of post</em></h1>
+          <p>
+            <strong>Lorem ipsum dolor,</strong> sit amet consectetur adipisicing elit.
+            Expedita at tempore aperiam, maiores aspernatur ea debitis quas impedit
+            nostrum perferendis molestias asperiores odio sapiente temporibus. Facere
+            optio impedit iste! Provident!
+          </p>
+        </article>
+        <article class="danger">
+          <h1>Title of post</h1>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita at tempore
+            aperiam, maiores aspernatur ea debitis quas impedit nostrum perferendis
+            molestias asperiores odio sapiente temporibus. Facere optio impedit iste!
+            Provident!
+          </p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
+
+<!-- <div></div> Divider -->
+
+<!-- <i>
+  => Italic
+  <em>
+    => Emphasis (default italic as a style)
+
+    <b> => Bold <strong> => Highlight (default bold)</strong></b></em
+  ></i
+> -->
+
+<!-- 
+Car => Bike
+Method of transportation -->
