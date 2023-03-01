@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="jquery-3.6.3.min.js"></script>
+    <script src="colorString.js"></script>
+    <script src="indexJQ.js"></script>
+  </head>
+
+  <body>
+    <style>
+      body {
+        background-color: #c0ffee;
+      }
+    </style>
+
+    <header>
+      <h1>Super Quiz of Destiny!</h1>
+      <input type="text" />
+    </header>
+    <main>
+      <section class="quiz">
+        <h2>What kind of potato is the best?</h2>
+        <p>
+          <strong>Lorem ipsum dolor sit amet consectetur</strong> adipisicing elit. Sed,
+          mollitia! Facere <em>laudantium iusto architecto quia eius</em> maxime labore
+          expedita nam. Alias vel <u>inventore modi laudantium</u> exercitationem culpa
+          ratione porro qui.
+        </p>
+        <ul>
+          <li><button value="bad">Yukon Gold</button></li>
+          <li><button value="best" id="best">Russett</button></li>
+          <li><button value="bad">Sweet</button></li>
+          <li><button value="bad">All of the above</button></li>
+        </ul>
+      </section>
+      <section class="result">
+        <p>Waiting for you to choose the right potato</p>
+
+        <!-- <div class="recent_result">
+          <h1>YOUR RESULT IS:</h1>
+          <p>MESSAGE</p>
+        </div> -->
+        <style>
+          strong {
+            font-weight: normal;
+            text-decoration: underline;
+          }
+          em {
+          }
+
+          .recent_result {
+            font-family: Arial, Helvetica, sans-serif;
+            background: yellow;
+            padding: 10px;
+            text-align: center;
+            display: inline-block;
+            border: 5px solid yellowgreen;
+          }
+          .recent_result p {
+            position: relative;
+            animation: bounce 1.5s ease infinite alternate-reverse;
+          }
+          @keyframes bounce {
+            0% {
+              top: -10px;
+            }
+            100% {
+              top: 10px;
+            }
+          }
+        </style>
+      </section>
+    </main>
+  </body>
+</html>
+
+{ }
