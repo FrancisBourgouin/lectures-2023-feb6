@@ -1,0 +1,50 @@
+*{
+  box-sizing: border-box;
+}
+
+body, html{
+  margin:0;
+  padding:0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width:100%;
+  min-height:70vh;
+}
+
+
+.face{
+  display:flex;
+  flex-wrap: wrap;
+  gap:1em;
+  width: 5em;
+  justify-content: center;
+}
+
+.face > div{
+  background-color:#B0B;
+}
+
+.left-eye, .right-eye{
+  height:2em;
+  width:2em;
+}
+
+.nose{
+  height:1em;
+  width:1em;
+  margin:0 auto;
+}
+
+.face > .mouth{
+  border:1em solid #b0b;
+  width:4em;
+  height:2em;
+  background-color:white;
+  margin: 0 0.5em;
+}
